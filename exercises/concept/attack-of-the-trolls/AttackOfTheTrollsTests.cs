@@ -1,4 +1,3 @@
-using Xunit;
 using Exercism.Tests;
 
 public class AttackOfTheTrollsTests
@@ -151,7 +150,7 @@ public class AttackOfTheTrollsTests
     [Task(4)]
     public void Check_all_for_read_and_write()
     {
-        Assert.True(Permissions.Check(Permission.Read | Permission.Write, Permission.Read | Permission.Write));
+        Assert.True(Permissions.Check(Permission.All, Permission.Read | Permission.Write));
     }
 
     [Fact]

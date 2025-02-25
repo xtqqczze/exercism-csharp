@@ -1,7 +1,4 @@
-using System;
-using Xunit;
 using Microsoft.Reactive.Testing;
-using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Reactive.Concurrency;
 
@@ -49,8 +46,10 @@ public class HangmanTests : ReactiveTest
     public void Guess_changes_state()
     {
         var hangman = new Hangman("foo");
-        HangmanState actual = null;
+        HangmanState? actual = null;
         hangman.StateObservable.Subscribe(x => actual = x);
+        
+        Assert.NotNull(actual);
         var initial = actual;
 
         // +--x->
@@ -64,8 +63,10 @@ public class HangmanTests : ReactiveTest
     public void Wrong_guess_decrements_remaining_guesses()
     {
         var hangman = new Hangman("foo");
-        HangmanState actual = null;
+        HangmanState? actual = null;
         hangman.StateObservable.Subscribe(x => actual = x);
+        
+        Assert.NotNull(actual);
         var initial = actual;
 
         // +--x->

@@ -1,5 +1,3 @@
-using System;
-
 public enum Bucket
 {
     One,
@@ -17,11 +15,11 @@ public class TwoBucket
 {
     public TwoBucket(int bucketOne, int bucketTwo, Bucket startBucket)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 
     public TwoBucketResult Measure(int goal)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 }

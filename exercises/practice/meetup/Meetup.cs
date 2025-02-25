@@ -1,5 +1,3 @@
-using System;
-
 public enum Schedule
 {
     Teenth,
@@ -18,6 +16,6 @@ public class Meetup
 
     public DateTime Day(DayOfWeek dayOfWeek, Schedule schedule)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 }

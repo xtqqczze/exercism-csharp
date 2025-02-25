@@ -1,16 +1,12 @@
-using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Threading;
-using Xunit;
+
 using Exercism.Tests;
 
 public class BeautySalonGoesGlobalTests
 {
     public BeautySalonGoesGlobalTests()
     {
-        Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+        Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
     }
 
     [Fact]

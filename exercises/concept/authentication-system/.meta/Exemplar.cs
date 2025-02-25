@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
 public class Authenticator
@@ -40,7 +39,7 @@ public class Authenticator
         get { return new Identity { Email = admin.Email, EyeColor = admin.EyeColor }; }
     }
 
-    public IReadOnlyDictionary<string, Identity> GetDevelopers()
+    public IDictionary<string, Identity> GetDevelopers()
     {
         return new ReadOnlyDictionary<string, Identity>(developers);
     }

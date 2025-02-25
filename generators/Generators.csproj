@@ -1,24 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>Exercism.CSharp</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
-    <PackageReference Include="DotLiquid" Version="2.2.656" />
-    <PackageReference Include="Humanizer" Version="2.14.1" />
-    <PackageReference Include="LibGit2Sharp" Version="0.27.0-preview-0182" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="serilog" Version="2.12.0" />
-    <PackageReference Include="serilog.sinks.literate" Version="3.0.0" />
-    <PackageReference Include="Tomlyn" Version="0.15.0" />
+    <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+    <PackageReference Include="LibGit2Sharp" Version="0.31.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.12.0" />
+    <PackageReference Include="Scriban" Version="5.12.1" />
+    <PackageReference Include="Tomlyn" Version="0.18.0" />
   </ItemGroup>
+  
   <ItemGroup>
-    <EmbeddedResource Include="Output\Rendering\Templates\*.liquid" />
+    <Content Include="..\exercises\practice\**" Link="exercises\practice\%(RecursiveDir)%(Filename)%(Extension)"  />
+    <Content Include="..\.problem-specifications\exercises\**" Link=".problem-specifications\exercises\%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
-  <PropertyGroup>
-    <RunWorkingDirectory>$(MSBuildProjectDirectory)</RunWorkingDirectory>
-  </PropertyGroup>
+
 </Project>

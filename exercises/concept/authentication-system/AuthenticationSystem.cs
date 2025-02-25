@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 public class Authenticator
 {
     private class EyeColor
@@ -8,7 +6,7 @@ public class Authenticator
         public string Green = "green";
         public string Brown = "brown";
         public string Hazel = "hazel";
-        public string Brey = "grey";
+        public string Grey = "grey";
     }
 
     public Authenticator(Identity admin)

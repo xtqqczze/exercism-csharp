@@ -1,5 +1,3 @@
-using Xunit;
-
 public class PigLatinTests
 {
     [Fact]
@@ -60,6 +58,12 @@ public class PigLatinTests
     public void Word_beginning_with_q_without_a_following_u()
     {
         Assert.Equal("atqay", PigLatin.Translate("qat"));
+    }
+
+    [Fact(Skip = "Remove this Skip property to run this test")]
+    public void Word_beginning_with_consonant_and_vowel_containing_qu()
+    {
+        Assert.Equal("iquidlay", PigLatin.Translate("liquid"));
     }
 
     [Fact(Skip = "Remove this Skip property to run this test")]

@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class Authenticator
 {
     public Identity Admin { get; } = new Identity
@@ -44,14 +41,14 @@ public class Authenticator
 //**** please do not modify the FacialFeatures class ****
 public class FacialFeatures
 {
-    public string EyeColor { get; set; }
-    public decimal PhiltrumWidth { get; set; }
+    public required string EyeColor { get; set; }
+    public required decimal PhiltrumWidth { get; set; }
 }
 
 //**** please do not modify the Identity class ****
 public class Identity
 {
-    public string Email { get; set; }
-    public FacialFeatures FacialFeatures { get; set; }
-    public IList<string> NameAndAddress { get; set; }
+    public required string Email { get; set; }
+    public required FacialFeatures FacialFeatures { get; set; }
+    public required IList<string> NameAndAddress { get; set; }
 }

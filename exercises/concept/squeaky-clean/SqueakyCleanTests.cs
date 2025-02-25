@@ -1,4 +1,3 @@
-using Xunit;
 using Exercism.Tests;
 
 public class SqueakyCleanTests
@@ -43,6 +42,13 @@ public class SqueakyCleanTests
     public void Convert_kebab_to_camel_case()
     {
         Assert.Equal("àḂç", Identifier.Clean("à-ḃç"));
+    }
+
+    [Fact]
+    [Task(3)]
+    public void Convert_kebab_to_camel_case_already_upper()
+    {
+        Assert.Equal("àḂç", Identifier.Clean("à-Ḃç"));
     }
 
     [Fact]
