@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
 /// <summary>
 /// Tournament tally system.
 /// </summary>
@@ -69,8 +64,7 @@ public class Tournament
     
     private void AddTeamOutcome(string team, Outcome outcome)
     {
-        TeamResult teamResult;
-        if (this.teams.TryGetValue(team, out teamResult)) {
+        if (this.teams.TryGetValue(team, out var teamResult)) {
             teamResult.AddOutcome(outcome);
         } else {
             teamResult = new TeamResult();

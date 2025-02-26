@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class FacialFeatures
 {
     public string EyeColor { get; }
@@ -17,7 +14,7 @@ public class FacialFeatures
         return EyeColor == other.EyeColor && PhiltrumWidth.Equals(other.PhiltrumWidth);
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;
@@ -47,7 +44,7 @@ public class Identity
         return Email == other.Email && Equals(FacialFeatures, other.FacialFeatures);
     }
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (ReferenceEquals(null, obj)) return false;
         if (ReferenceEquals(this, obj)) return true;

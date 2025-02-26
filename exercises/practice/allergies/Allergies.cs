@@ -1,5 +1,3 @@
-using System;
-
 public enum Allergen
 {
     Eggs,
@@ -20,11 +18,11 @@ public class Allergies
 
     public bool IsAllergicTo(Allergen allergen)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 
     public Allergen[] List()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 }

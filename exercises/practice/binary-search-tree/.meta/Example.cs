@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 
 public class BinarySearchTree : IEnumerable<int>
 {
@@ -29,9 +26,9 @@ public class BinarySearchTree : IEnumerable<int>
 
     public int Value { get; }
 
-    public BinarySearchTree Left { get; private set; }
+    public BinarySearchTree? Left { get; private set; }
 
-    public BinarySearchTree Right { get; private set; }
+    public BinarySearchTree? Right { get; private set; }
 
     public BinarySearchTree Add(int value)
     {
@@ -47,7 +44,7 @@ public class BinarySearchTree : IEnumerable<int>
         return this;
     }
 
-    private static BinarySearchTree Add(int value, BinarySearchTree tree)
+    private static BinarySearchTree Add(int value, BinarySearchTree? tree)
     {
         if (tree == null)
         {

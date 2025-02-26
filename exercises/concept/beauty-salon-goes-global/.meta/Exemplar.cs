@@ -1,4 +1,3 @@
-using System;
 using System.Globalization;
 using System.Runtime.InteropServices;
 
@@ -86,7 +85,7 @@ public static class Appointment
                 cultureId = "fr-FR";
                 break;
         }
-        return new CultureInfo(cultureId);
+        return CultureInfo.GetCultureInfo(cultureId);
     }
 
     private static string GetTimeZoneId(Location location)

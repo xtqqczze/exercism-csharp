@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public class Robot
 {
     private static readonly Random Random = new Random();
@@ -10,7 +7,7 @@ public class Robot
 
     public Robot()
     {
-        Reset();
+        Name = GenerateName();
     }
 
     private static string GenerateName()

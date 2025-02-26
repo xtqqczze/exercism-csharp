@@ -1,6 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-
 public class CustomSet
 {
     private readonly SortedDictionary<int, int> items = new SortedDictionary<int, int>();
@@ -45,7 +42,7 @@ public class CustomSet
 
     private int[] GetValuesFromKeys(IEnumerable<int> keys) => keys.Select(key => items[key]).ToArray();
 
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (!(obj is CustomSet other))
         {

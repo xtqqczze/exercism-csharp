@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using System.Text.RegularExpressions;
 
 public static class Markdown
@@ -39,7 +37,7 @@ public static class Markdown
         return list ? textHtml : textHtml.WrapInTag(ParagraphTag);
     }
 
-    private static Tuple<bool, string> ParseHeader(this string markdown, bool list)
+    private static Tuple<bool, string>? ParseHeader(this string markdown, bool list)
     {
         var headerNumber =
             markdown
@@ -56,7 +54,7 @@ public static class Markdown
         return Tuple.Create(false, html);
     }
 
-    private static Tuple<bool, string> ParseLineItem(this string markdown, bool list)
+    private static Tuple<bool, string>? ParseLineItem(this string markdown, bool list)
     {
         if (!markdown.StartsWith(ListItemMarkdown))
             return null;

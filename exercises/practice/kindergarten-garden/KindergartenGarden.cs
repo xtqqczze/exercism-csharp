@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 public enum Plant
 {
     Violets,
@@ -17,6 +14,6 @@ public class KindergartenGarden
 
     public IEnumerable<Plant> Plants(string student)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 }

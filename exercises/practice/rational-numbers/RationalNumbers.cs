@@ -1,6 +1,3 @@
-using System;
-using System.Diagnostics;
-
 public static class RealNumberExtension
 {
     public static double Expreal(this int realNumber, RationalNumber r)
@@ -37,21 +34,21 @@ public struct RationalNumber
 
     public RationalNumber Abs()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 
     public RationalNumber Reduce()
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 
     public RationalNumber Exprational(int power)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 
     public double Expreal(int baseNumber)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 }

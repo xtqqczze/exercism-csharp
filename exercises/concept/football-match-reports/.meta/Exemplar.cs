@@ -1,5 +1,3 @@
-using System;
-
 public static class PlayAnalyzer
 {
     public static string AnalyzeOnField(int shirtNum)
@@ -26,7 +24,7 @@ public static class PlayAnalyzer
             case 10:
                 return "striker";
             default:
-                throw new ArgumentOutOfRangeException();
+                return "UNKNOWN";
         }
     }
 
@@ -47,7 +45,7 @@ public static class PlayAnalyzer
             case Manager manager:
                 return manager.Name;
             default:
-                throw new ArgumentException();
+                return "";
         }
     }
 }

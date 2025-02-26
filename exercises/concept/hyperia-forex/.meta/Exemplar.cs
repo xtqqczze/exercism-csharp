@@ -1,5 +1,8 @@
-using System;
-using System.Runtime.InteropServices;
+#pragma warning disable CS0660
+#pragma warning disable CS0661
+
+#pragma warning disable CS0660
+#pragma warning disable CS0661
 
 public struct CurrencyAmount
 {
@@ -97,3 +100,6 @@ public struct CurrencyAmount
         return @this.amount;
     }
 }
+
+#pragma warning restore CS0660
+#pragma warning restore CS0661

@@ -1,6 +1,3 @@
-using System;
-using Xunit;
-
 public class CircularBufferTests
 {
     [Fact]
@@ -38,7 +35,7 @@ public class CircularBufferTests
     }
 
     [Fact(Skip = "Remove this Skip property to run this test")]
-    public void Full_buffer_cant_be_written_to()
+    public void Full_buffer_can_t_be_written_to()
     {
         var buffer = new CircularBuffer<int>(capacity: 1);
         buffer.Write(1);
@@ -68,11 +65,10 @@ public class CircularBufferTests
     }
 
     [Fact(Skip = "Remove this Skip property to run this test")]
-    public void Items_cleared_out_of_buffer_cant_be_read()
+    public void Items_cleared_out_of_buffer_can_t_be_read()
     {
-        var buffer = new CircularBuffer<int>(capacity: 3);
+        var buffer = new CircularBuffer<int>(capacity: 1);
         buffer.Write(1);
-        buffer.Write(2);
         buffer.Clear();
         Assert.Throws<InvalidOperationException>(() => buffer.Read());
     }

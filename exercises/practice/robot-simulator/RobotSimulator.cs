@@ -1,5 +1,3 @@
-using System;
-
 public enum Direction
 {
     North,
@@ -18,7 +16,7 @@ public class RobotSimulator
     {
         get
         {
-            throw new NotImplementedException("You need to implement this function.");
+            throw new NotImplementedException("You need to implement this method.");
         }
     }
 
@@ -26,7 +24,7 @@ public class RobotSimulator
     {
         get
         {
-            throw new NotImplementedException("You need to implement this function.");
+            throw new NotImplementedException("You need to implement this method.");
         }
     }
 
@@ -34,12 +32,12 @@ public class RobotSimulator
     {
         get
         {
-            throw new NotImplementedException("You need to implement this function.");
+            throw new NotImplementedException("You need to implement this method.");
         }
     }
 
     public void Move(string instructions)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        throw new NotImplementedException("You need to implement this method.");
     }
 }
